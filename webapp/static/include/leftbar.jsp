@@ -101,17 +101,17 @@
                                 </li>
                                 <li><a href="javascript:"><i class="fa fa-calendar"></i> Calendar <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu" style="display: none">
-                                        <li><a href="lms_adm_031.jsp">My Calendar</a>
+                                        <li><a href="<c:url value="/admin/lms_adm_031"/> ">My Calendar</a>
                                         </li>
-                                        <li><a href="<c:url value="lms_adm_032.jsp"/> ">My workmate</a>
+                                        <li><a href="<c:url value="/admin/lms_adm_032"/> ">My workmate</a>
                                         </li>
-                                        <li><a href="<c:url value="lms_adm_033.jsp "/> ">My collaborators</a>
+                                        <li><a href="<c:url value="/admin/lms_adm_033"/> ">My collaborators</a>
                                         </li>
-                                        <li><a href="<c:url value="lms_adm_034.jsp"/> ">Department</a>
+                                        <li><a href="<c:url value="/admin/lms_adm_034"/> ">Department</a>
                                         </li>
-                                        <li><a href="<c:url value="lms_adm_035.jsp"/> ">Global </a>
+                                        <li><a href="<c:url value="/admin/lms_adm_035"/> ">Global </a>
                                         </li>
-                                        <li><a href="<c:url value="lms_adm_036.jsp"/> ">Tabular </a>
+                                        <li><a href="<c:url value="/admin/lms_adm_036"/> ">Tabular </a>
                                         </li>
                                     </ul>
                                 </li>
