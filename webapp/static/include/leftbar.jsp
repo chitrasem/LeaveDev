@@ -103,15 +103,15 @@
                                     <ul class="nav child_menu" style="display: none">
                                         <li><a href="lms_adm_031.jsp">My Calendar</a>
                                         </li>
-                                        <li><a href="lms_adm_032.jsp">My workmate</a>
+                                        <li><a href="<c:url value="lms_adm_032.jsp"/> ">My workmate</a>
                                         </li>
-                                        <li><a href="lms_adm_033.jsp">My collaborators</a>
+                                        <li><a href="<c:url value="lms_adm_033.jsp "/> ">My collaborators</a>
                                         </li>
-                                        <li><a href="lms_adm_034.jsp">Department</a>
+                                        <li><a href="<c:url value="lms_adm_034.jsp"/> ">Department</a>
                                         </li>
-                                        <li><a href="lms_adm_035.jsp">Global </a>
+                                        <li><a href="<c:url value="lms_adm_035.jsp"/> ">Global </a>
                                         </li>
-                                        <li><a href="lms_adm_036.jsp">Tabular </a>
+                                        <li><a href="<c:url value="lms_adm_036.jsp"/> ">Tabular </a>
                                         </li>
                                     </ul>
                                 </li>
