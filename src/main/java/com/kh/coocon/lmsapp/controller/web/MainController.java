@@ -11,7 +11,7 @@ public class MainController {
 	@RequestMapping(value={"/","/dashboard","/home","/index"} , method = RequestMethod.GET)
 	public String dasboardPage(ModelMap m){
 		m.addAttribute("message","Dashboard");
-		return "dasboard";
+		return "lms_main";
 	}
 	
 	@RequestMapping(value="/user" , method = RequestMethod.GET)
