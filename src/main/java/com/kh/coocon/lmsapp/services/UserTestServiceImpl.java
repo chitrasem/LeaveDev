@@ -10,9 +10,11 @@ import java.util.List;
 import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.kh.coocon.lmsapp.entities.UserTest;
 
+@Service
 public class UserTestServiceImpl implements UserTestService{
 	@Autowired
 	private DataSource dataSource;

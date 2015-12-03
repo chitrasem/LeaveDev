@@ -6,11 +6,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-@RequestMapping("/adminpage")
-public class TestController {
-	@RequestMapping(value="/user" , method = RequestMethod.GET)
-	public String userPage(ModelMap m){
-		m.addAttribute("message","USER");
+@RequestMapping("/page")
+public class TestWebController {
+
+	
+	@RequestMapping(value="/" , method=RequestMethod.GET)
+	public String test(ModelMap m){
+		m.addAttribute("message","ADMIN PAGE");
 		return "user";
 	}
+	
 }
