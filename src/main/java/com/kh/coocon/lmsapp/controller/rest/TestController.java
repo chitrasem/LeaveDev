@@ -17,7 +17,7 @@ import com.kh.coocon.lmsapp.entities.UserTest;
 import com.kh.coocon.lmsapp.services.UserTestService;
 
 @RestController
-@RequestMapping("rest/test")
+@RequestMapping("rest")
 
 public class TestController {
 	@Autowired
