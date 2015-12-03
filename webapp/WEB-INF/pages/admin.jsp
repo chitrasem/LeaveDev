@@ -6,7 +6,7 @@
     <title>HelloWorld Admin page</title>
 </head>
 <body>
-    Dear <strong>${user}</strong>, Welcome to Admin Page.
+    Dear <strong>${user}</strong>, Welcome to Admin Page.aaa
     <a href="<c:url value="/logout" />">Logout</a>
 </body>
 </html>
