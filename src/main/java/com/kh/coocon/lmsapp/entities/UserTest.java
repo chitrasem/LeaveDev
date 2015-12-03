@@ -2,38 +2,33 @@ package com.kh.coocon.lmsapp.entities;
 
 public class UserTest {
 	private int id;
-	private String fname;
-	private String lname;
-	private String sex;
-	private String contact;
+	private String title;
+	private String author;
+	private String postedDate;
+	
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	public String getAuthor() {
+		return author;
+	}
+	public void setAuthor(String author) {
+		this.author = author;
+	}
 	public int getId() {
 		return id;
 	}
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getFname() {
-		return fname;
+	public String getPostedDate() {
+		return postedDate;
 	}
-	public void setFname(String fname) {
-		this.fname = fname;
+	public void setPostedDate(String postedDate) {
+		this.postedDate = postedDate;
 	}
-	public String getLname() {
-		return lname;
-	}
-	public void setLname(String lname) {
-		this.lname = lname;
-	}
-	public String getSex() {
-		return sex;
-	}
-	public void setSex(String sex) {
-		this.sex = sex;
-	}
-	public String getContact() {
-		return contact;
-	}
-	public void setContact(String contact) {
-		this.contact = contact;
-	}
+
 }
