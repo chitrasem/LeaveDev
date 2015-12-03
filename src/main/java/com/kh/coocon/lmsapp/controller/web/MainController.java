@@ -180,6 +180,7 @@ public class MainController {
         return "redirect:/login?logout";
     }
  */
+    
     @RequestMapping(value = "/Access_Denied", method = RequestMethod.GET)
     public String accessDeniedPage(ModelMap model) {
         model.addAttribute("user", getPrincipal());
