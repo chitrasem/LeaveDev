@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-@RequestMapping("/admintest")
+@RequestMapping("/adminpage")
 public class TestController {
 	@RequestMapping(value="/user" , method = RequestMethod.GET)
 	public String userPage(ModelMap m){

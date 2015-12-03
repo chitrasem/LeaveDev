@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
+@RequestMapping("/")
 public class MainController {
 
 	@RequestMapping(value={"/","/dashboard","/home","/index"} , method = RequestMethod.GET)
