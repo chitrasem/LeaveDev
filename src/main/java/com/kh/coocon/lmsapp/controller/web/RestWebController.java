@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 @RequestMapping("/admin/gateways/api")
-public class TestWebController {
+public class RestWebController {
 
 	
 	@RequestMapping(value="/" , method=RequestMethod.GET)
