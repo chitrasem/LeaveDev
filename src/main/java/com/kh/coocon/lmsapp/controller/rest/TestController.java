@@ -17,7 +17,7 @@ import com.kh.coocon.lmsapp.entities.UserTest;
 import com.kh.coocon.lmsapp.services.UserTestService;
 
 @RestController
-@RequestMapping("rest")
+@RequestMapping("/rest")
 
 public class TestController {
 	
@@ -25,7 +25,7 @@ public class TestController {
 	@Autowired
 	UserTestService userService;
 	
-	/*@RequestMapping(value = { "/"}, method = RequestMethod.GET ,  produces=MediaType.APPLICATION_JSON_VALUE)
+	@RequestMapping(value = { "/"}, method = RequestMethod.GET ,  produces=MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<Map<String, Object>> list() {
 		List<UserTest> list = userService.list();
 		Map<String, Object> map = new HashMap<String, Object>();
@@ -35,6 +35,6 @@ public class TestController {
 		}
 		map.put("RESP_DATA", list);
 		return new ResponseEntity<Map<String, Object>>(map, HttpStatus.OK);
-	}*/
+	}
 	
 }

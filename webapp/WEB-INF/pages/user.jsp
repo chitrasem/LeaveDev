@@ -11,5 +11,6 @@
 </head>
 <body>
 <h1 id="title">${message}</h1>
+<h3>${pageContext.request.contextPath}</h3>
 </body>
 </html>
