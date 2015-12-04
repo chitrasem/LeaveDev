@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.kh.coocon.lmsapp.entities.UserTest;
 
-public interface UserTestService {
+public interface EntitileService {
 	public List<UserTest> list();
 	public boolean addUser(UserTest b);
 	public boolean deleteUser(int id);
