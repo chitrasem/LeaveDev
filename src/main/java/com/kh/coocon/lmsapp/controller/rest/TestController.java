@@ -36,8 +36,8 @@ public class TestController {
 			return new ResponseEntity<Map<String, Object>>(map, HttpStatus.NO_CONTENT);
 		}
 		System.out.println(list);
-		map.put("DATECREATE",LmsMsg.RSLT_CD );
-		map.put("DATECREATE",LmsMsg.RSLT_MSG );
+		map.put("CODE",LmsMsg.RSLT_CD.getmsg() );
+		map.put("MESSAGE",LmsMsg.RSLT_MSG.getmsg() );
 		map.put("RESP_DATA", list);
 		return new ResponseEntity<Map<String, Object>>(map, HttpStatus.OK);
 	}
