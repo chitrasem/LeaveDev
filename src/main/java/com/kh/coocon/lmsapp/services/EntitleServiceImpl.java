@@ -33,7 +33,7 @@ public class EntitleServiceImpl implements EntitleService{
 				b = new UserTest();				
 				b.setId(rs.getInt("type_id"));
 				b.setTitle(rs.getString("description"));
-				b.setAuthor(rs.getString("day"));
+				b.setAuthor(rs.getString("days"));
 				b.setPostedDate(rs.getString("startdate"));
 				a.add(b);
 			}
