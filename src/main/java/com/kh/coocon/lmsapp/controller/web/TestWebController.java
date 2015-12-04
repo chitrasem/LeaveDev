@@ -6,14 +6,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-@RequestMapping("/adminpage")
+@RequestMapping("/admin/gateways/api")
 public class TestWebController {
 
 	
 	@RequestMapping(value="/" , method=RequestMethod.GET)
 	public String test(ModelMap m){
 		m.addAttribute("message","ADMIN PAGE");
-		return "user";
+		return "/gateway/api";
 	}
 	
 }

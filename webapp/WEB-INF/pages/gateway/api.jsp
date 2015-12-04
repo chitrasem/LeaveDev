@@ -106,6 +106,7 @@ iframe html body {
 	<center>
 		<h1>
 			<strong>WEB SERVICE API</strong>
+			<h4>${pageContext.request.contextPath}</h4>
 		</h1>
 	</center>
 
@@ -118,7 +119,7 @@ iframe html body {
 		<strong>(#1. LIST BOOK ==> URL :
 			${pageContext.request.contextPath}/rest/book/, METHOD : "GET") </strong> <br />
 		<form
-			action="${pageContext.request.contextPath}/rest/book/" method="GET"
+			action="${pageContext.request.contextPath}/admin/gateways/api/test" method="GET"
 			class="form">
 
 			<table>
