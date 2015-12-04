@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
 import com.kh.coocon.lmsapp.entities.UserTest;
 
 @Service
-public class UserTestServiceImpl implements EntitileService{
+public class EntitleServiceImpl implements EntitileService{
 	@Autowired
 	private DataSource dataSource;
 	
