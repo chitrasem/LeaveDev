@@ -37,9 +37,4 @@ public class TestController {
 		return new ResponseEntity<Map<String, Object>>(map, HttpStatus.OK);
 	}*/
 	
-	@RequestMapping(value={"/wtf","wth"} , method = RequestMethod.GET)
-	public String dasboardPage(ModelMap m){
-		m.addAttribute("message","Dashboard");
-		return "admin";
-	}
 }
