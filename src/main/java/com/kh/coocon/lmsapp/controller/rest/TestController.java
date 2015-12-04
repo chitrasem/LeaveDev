@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.kh.coocon.lmsapp.entities.UserTest;
+import com.kh.coocon.lmsapp.enums.LmsMsg;
 import com.kh.coocon.lmsapp.services.UserTestService;
 
 @RestController
@@ -35,7 +36,8 @@ public class TestController {
 			return new ResponseEntity<Map<String, Object>>(map, HttpStatus.NO_CONTENT);
 		}
 		System.out.println(list);
-		map.put("DATECREATE","1000" );
+		map.put("DATECREATE",LmsMsg.RSLT_CD );
+		map.put("DATECREATE",LmsMsg.RSLT_MSG );
 		map.put("RESP_DATA", list);
 		return new ResponseEntity<Map<String, Object>>(map, HttpStatus.OK);
 	}
