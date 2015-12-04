@@ -19,7 +19,7 @@ import com.kh.coocon.lmsapp.services.UserTestService;
 @RestController
 @RequestMapping("/admin/gateways/api")
 
-public class TestController {
+public class ActionController {
 	
 	
 	@Autowired
