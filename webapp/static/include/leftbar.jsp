@@ -69,7 +69,7 @@
                                         </li>
                                         <li><a href="javascript:"><i class="fa fa-star-half-empty"></i> CONTRACTS</a>
                                         </li>
-                                        <li><a href="lms_adm_017.jsp">List of Contracts</a>
+                                        <li><a href="lms_adm_019">List of Contracts</a>
                                         </li>
                                         <li><a href="lms_adm_021.jsp">List of Positions</a>
                                         </li>
