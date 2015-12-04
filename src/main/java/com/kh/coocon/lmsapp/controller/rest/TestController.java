@@ -1,5 +1,6 @@
 package com.kh.coocon.lmsapp.controller.rest;
 
+import java.io.Console;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -33,6 +34,7 @@ public class TestController {
 			map.put("MESSAGE", "No data");
 			return new ResponseEntity<Map<String, Object>>(map, HttpStatus.NO_CONTENT);
 		}
+		System.out.println(list);
 		map.put("RESP_DATA", list);
 		return new ResponseEntity<Map<String, Object>>(map, HttpStatus.OK);
 	}
