@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.kh.coocon.lmsapp.entities.UserTest;
 import com.kh.coocon.lmsapp.enums.LmsMsg;
-import com.kh.coocon.lmsapp.services.EntitileService;
+import com.kh.coocon.lmsapp.services.EntitleService;
 
 @RestController
 @RequestMapping("/admin/gateways/api")
@@ -23,7 +23,7 @@ public class ActionController {
 	
 	
 	@Autowired
-	EntitileService userService;
+	EntitleService userService;
 	
 	@RequestMapping(value = { "/test"}, method = RequestMethod.GET ,  produces=MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<Map<String, Object>> list() {
