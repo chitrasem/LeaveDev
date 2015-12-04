@@ -21,7 +21,7 @@ public class EntitleServiceImpl implements EntitleService{
 	
 	@Override
 	public List<UserTest> list() {
-		String sql = "SELECT id,title,author,posted_date FROM book";
+		String sql = "select type_id,description,days,startdate from lms_entitleddays";
 		try (Connection cnn = dataSource.getConnection();
 				PreparedStatement ps = cnn.prepareStatement(sql);
 				ResultSet rs = ps.executeQuery();
@@ -31,10 +31,10 @@ public class EntitleServiceImpl implements EntitleService{
 			UserTest b = null;
 			while (rs.next()) {
 				b = new UserTest();				
-				b.setId(rs.getInt("id"));
-				b.setTitle(rs.getString("title"));
-				b.setAuthor(rs.getString("author"));
-				b.setPostedDate(rs.getString("posted_date"));
+				b.setId(rs.getInt("type_id"));
+				b.setTitle(rs.getString("description"));
+				b.setAuthor(rs.getString("day"));
+				b.setPostedDate(rs.getString("startdate"));
 				a.add(b);
 			}
 			return a;
