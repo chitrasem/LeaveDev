@@ -18,7 +18,7 @@ import com.kh.coocon.lmsapp.entities.UserTest;
 import com.kh.coocon.lmsapp.services.UserTestService;
 
 @RestController
-@RequestMapping("/rest")
+@RequestMapping("/admin/gateways/api")
 
 public class TestController {
 	
@@ -35,6 +35,7 @@ public class TestController {
 			return new ResponseEntity<Map<String, Object>>(map, HttpStatus.NO_CONTENT);
 		}
 		System.out.println(list);
+		map.put("DATECREATE","1000" );
 		map.put("RESP_DATA", list);
 		return new ResponseEntity<Map<String, Object>>(map, HttpStatus.OK);
 	}
