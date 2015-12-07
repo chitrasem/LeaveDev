@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.kh.coocon.lmsapp.entities.UserTest;
+import com.kh.coocon.lmsapp.entities.Entitledays;
 import com.kh.coocon.lmsapp.enums.LmsMsg;
 import com.kh.coocon.lmsapp.services.EntitleService;
 
@@ -27,7 +27,7 @@ public class ActionController {
 	
 	@RequestMapping(value = { "/test"}, method = RequestMethod.GET ,  produces=MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<Map<String, Object>> list() {
-		List<UserTest> list = userService.list();
+		List<Entitledays> list = userService.list();
 		Map<String, Object> map = new HashMap<String, Object>();
 		if (list.isEmpty()) {
 			map.put("MESSAGE", "No data");
