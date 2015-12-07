@@ -55,10 +55,10 @@ public class EntitleServiceImpl implements EntitleService{
 			Entitledays b = null;
 			while (rs.next()) {
 				b = new Entitledays();				
-				b.setId(rs.getInt("available"));
-				b.setTitle(rs.getString("leaveType"));
-				b.setAuthor(rs.getString("taken"));
-				b.setPostedDate(rs.getString("entitled"));
+				b.setLeavesAvailable(rs.getInt("available"));
+				b.setLeavesTypes(rs.getString("leaveType"));
+				b.setLeavesTaken(rs.getFloat("taken"));
+				b.setLeavesEntitled(rs.getFloat("entitled"));
 				a.add(b);
 			}
 			return a;
