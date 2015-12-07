@@ -27,16 +27,18 @@ public class ActionController {
 	
 	@RequestMapping(value = { "/test"}, method = RequestMethod.GET ,  produces=MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<Map<String, Object>> list() {
-		List<Entitledays> list = userService.list();
+		//List<Entitledays> list = userService.list();
 		Map<String, Object> map = new HashMap<String, Object>();
-		if (list.isEmpty()) {
+		Map<String, Object> listData = new HashMap<String, Object>();
+		listData.put("Example", userService.list());
+		if (listData.isEmpty()) {
 			map.put("MESSAGE", "No data");
 			return new ResponseEntity<Map<String, Object>>(map, HttpStatus.NO_CONTENT);
 		}
-		System.out.println(list);
+		//System.out.println(list);
 		map.put("CODE",LmsMsg.RSLT_CD.getmsg() );
 		map.put("MESSAGE",LmsMsg.RSLT_MSG.getmsg() );
-		map.put("RESP_DATA", list);
+		map.put("RESP_DATA", listData);
 		return new ResponseEntity<Map<String, Object>>(map, HttpStatus.OK);
 	}
 	

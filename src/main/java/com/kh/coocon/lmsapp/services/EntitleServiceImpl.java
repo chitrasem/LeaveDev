@@ -38,7 +38,7 @@ public class EntitleServiceImpl implements EntitleService{
 					+ " 		LEFT JOIN lms_types b ON b.type_id = A .type_id		"   
 					+ " 		LEFT JOIN lms_entitleddays C ON b.type_ID = C .TYPE_id	"   
 					+ " 		WHERE							"   
-					+ " 			A .employee_id = 2				"   
+					+ " 			A .employee_id = 5				"   
 					+ " 		AND A .status_id = 2					"   
 					+ " 		GROUP BY						"   
 					+ " 		NAME							"   
