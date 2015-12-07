@@ -105,7 +105,7 @@ iframe html body {
 
 	<center>
 		<h1>
-			<strong>WEB SERVICE API</strong>
+			<strong>LMS Web SERVICE API</strong>
 			<h4>${pageContext.request.contextPath}</h4>
 		</h1>
 	</center>
@@ -116,7 +116,7 @@ iframe html body {
 
 
 	<div>
-		<strong>(#1. LIST BOOK ==> URL :
+		<strong>(#1. List leave requested ==> URL :
 			${pageContext.request.contextPath}/rest/book/, METHOD : "GET") </strong> <br />
 		<form
 			action="${pageContext.request.contextPath}/admin/gateways/api/test" method="GET"

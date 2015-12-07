@@ -21,7 +21,50 @@ public class EntitleServiceImpl implements EntitleService{
 	
 	@Override
 	public List<UserTest> list() {
-		String sql = "select type_id,description,days,startdate from lms_entitleddays";
+		/*String sql = "SELECT leaveType,(entitled - taken) as Available ,taken, entitiled "
+				+ "from ("
+					+ "SELECT "
+						+ "SUM(A.duration) as taken"
+						+ "b.NAME AS leaveType,"
+						+ "MIN (C.days) AS entitled"
+						+ "FROM"
+							+ "lms_leaves A"
+					+ "LEFT JOIN lms_types b ON b.type_id = A.type_id"
+					+ "LEFT JOIN lms_entitleddays C ON b.type_ID = C.TYPE_id"
+					+ "WHERE"
+						+ "A.employee_id =2 and a.status_id = 2 "
+					+ "GROUP BY NAME ORDER BY taken"
+					+ ") as mytable";*/
+		
+String sql= " SELECT								"   
+		+ " 	leaveType,							"   
+		+ " 	(entitled - taken) AS available,				"   
+		+ " 	taken,								"   
+		+ " 	entitled							"   
+		+ " FROM								"   
+		+ " 	(								"   
+		+ " 		SELECT							"   
+		+ " 			SUM (A .duration) AS taken,			"   
+		+ " 			b. NAME AS leaveType,				"   
+		+ " 			MIN (C .days) AS entitled			"   
+		+ " 		FROM							"   
+		+ " 			lms_leaves A					"   
+		+ " 		LEFT JOIN lms_types b ON b.type_id = A .type_id		"   
+		+ " 		LEFT JOIN lms_entitleddays C ON b.type_ID = C .TYPE_id	"   
+		+ " 		WHERE							"   
+		+ " 			A .employee_id = 2				"   
+		+ " 		AND A .status_id = 2					"   
+		+ " 		GROUP BY						"   
+		+ " 		NAME							"   
+		+ " 	ORDER BY							"   
+		+ " 		taken							"   
+		+ " ) AS mytable							";  
+
+		/*String sql = "select id, employee_id,"
+				+ "status_id,"
+				+ "type_id,"
+				+ "startdate from lms_leaves";
+		*/
 		try (Connection cnn = dataSource.getConnection();
 				PreparedStatement ps = cnn.prepareStatement(sql);
 				ResultSet rs = ps.executeQuery();
@@ -31,10 +74,10 @@ public class EntitleServiceImpl implements EntitleService{
 			UserTest b = null;
 			while (rs.next()) {
 				b = new UserTest();				
-				b.setId(rs.getInt("type_id"));
-				b.setTitle(rs.getString("description"));
-				b.setAuthor(rs.getString("days"));
-				b.setPostedDate(rs.getString("startdate"));
+				b.setId(rs.getInt("available"));
+				b.setTitle(rs.getString("leaveType"));
+				b.setAuthor(rs.getString("taken"));
+				b.setPostedDate(rs.getString("entitled"));
 				a.add(b);
 			}
 			return a;
