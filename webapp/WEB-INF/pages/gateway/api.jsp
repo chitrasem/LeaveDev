@@ -126,7 +126,10 @@ iframe html body {
 				<tr>
 					<td>JSON_REQ</td>
 					<td><textarea name="JSONData" class="JSONData">
-{}
+					{
+						"title"  : "JAVA" ,
+						"author" : "Vuthea"
+					}
                     </textarea></td>
 				</tr>
 				<tr>
