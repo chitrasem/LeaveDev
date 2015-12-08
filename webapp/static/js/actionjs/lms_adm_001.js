@@ -1,7 +1,12 @@
 $(document).ready(function() {
+	var empId = 2;
+	
+	
+	
 	$.ajax({
 		url : "../admin/action/service/lms_adm_001",
 		dataType : "JSON",
+		data : { field1: "hello", field2 : "hello2"} ,
 		contentType : 'application/json',
 		type : "GET",
 		success : function(data) {
