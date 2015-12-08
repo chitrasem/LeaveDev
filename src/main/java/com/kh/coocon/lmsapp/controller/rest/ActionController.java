@@ -23,7 +23,7 @@ public class ActionController {
 	@Autowired
 	EntitleService userService;
 	
-	@RequestMapping(value = { "/lms_adm_001.act"}, method = RequestMethod.GET ,  produces=MediaType.APPLICATION_JSON_VALUE)
+	@RequestMapping(value = { "/lms_adm_001"}, method = RequestMethod.GET ,  produces=MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<Map<String, Object>> list() {
 		//List<Entitledays> list = userService.list();
 		Map<String, Object> map = new HashMap<String, Object>();
