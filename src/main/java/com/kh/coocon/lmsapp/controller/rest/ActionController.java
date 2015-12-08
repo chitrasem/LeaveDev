@@ -15,7 +15,7 @@ import com.kh.coocon.lmsapp.enums.LmsMsg;
 import com.kh.coocon.lmsapp.services.EntitleService;
 
 @RestController
-@RequestMapping("/admin/gateways/api")
+@RequestMapping("/admin/action/service")
 
 public class ActionController {
 	
