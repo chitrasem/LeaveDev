@@ -38,7 +38,7 @@
                                     <li>
                                         <a>
                                             <span class="image">
-                                        <img src="static/images/img.jpg" alt="Profile Image" />
+                                        <img src="<c:url value="/static/images/img.jpg" />" alt="Profile Image" />
                                     </span>
                                             <span>
                                         <span>John Smith</span>
@@ -52,7 +52,7 @@
                                     <li>
                                         <a>
                                             <span class="image">
-                                        <img src="static/images/img.jpg" alt="Profile Image" />
+                                        <img src="<c:url value="/static/images/img.jpg"/>" alt="Profile Image" />
                                     </span>
                                             <span>
                                         <span>John Smith</span>
@@ -66,7 +66,7 @@
                                     <li>
                                         <a>
                                             <span class="image">
-                                        <img src="static/images/img.jpg" alt="Profile Image" />
+                                        <img src="<c:url value="/static/images/img.jpg" />" alt="Profile Image" />
                                     </span>
                                             <span>
                                         <span>John Smith</span>
@@ -80,7 +80,7 @@
                                     <li>
                                         <a>
                                             <span class="image">
-                                        <img src="<c:url value="static/images/img.jpg" />"alt="Profile Image" />
+                                        <img src="<c:url value="/static/images/img.jpg" />"alt="Profile Image" />
                                     </span>
                                             <span>
                                         <span>John Smith</span>
