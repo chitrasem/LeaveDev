@@ -23,4 +23,4 @@
    <!-- Please adn end tage body and html on your own page because i need to include my oun js  -->
 <!-- </body>
 </html> -->
-    <script src="<c:url value="/static/js/jquery.tmpl.1.1.1.js" />"></script>
+    <script src="<c:url value="/static/js/jquery.tmpl.min.js" />"></script>
