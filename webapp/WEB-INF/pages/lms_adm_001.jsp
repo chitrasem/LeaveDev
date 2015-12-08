@@ -148,10 +148,10 @@
    <script src="<c:url value="/static/js/actionjs/lms_adm_001.js" />"></script>
    <script id="mytemplate" type="text/html">
    	<tr>                                             											
-   		<td>{leavesType}</td>
-   		<td>{leavesAvailable}</td>
-   		<td>{leavesTaken}</td>
-   		<td>{leavesEntitled}</td>    
+   		<td>{{= LTY}}</td>
+   		<td>{{= LA}}</td>
+   		<td>{{= LT}}</td>
+   		<td>{{= LE}}</td>    
 	</tr>
    </script>
    
