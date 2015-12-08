@@ -119,7 +119,7 @@ iframe html body {
 		<strong>(#1. List leave requested ==> URL :
 			${pageContext.request.contextPath}/rest/book/, METHOD : "GET") </strong> <br />
 		<form
-			action="${pageContext.request.contextPath}/admin/action/service/lms_adm_001.act" method="GET"
+			action="${pageContext.request.contextPath}/admin/action/service/lms_adm_001" method="GET"
 			class="form">
 
 			<table>
