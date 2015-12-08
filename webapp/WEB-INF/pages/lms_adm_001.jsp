@@ -97,8 +97,8 @@
 												
                                             </tr>
                                         </thead>
-                                        <tbody>
-											<tr>                                             											
+                                        <tbody id="entitle">
+											<!-- <tr>                                             											
                                                 <td>Annual Leave</td>
                                                 <td>13</td>
                                                 <td>5</td>
@@ -115,7 +115,7 @@
                                                 <td>7</td>
                                                 <td>0</td>
                                                 <td>7</td>    
-                                            </tr>
+                                            </tr> -->
                                               
                                         </tbody>
 										<!--<tfoot>
@@ -146,3 +146,13 @@
 
    <%@include file="/static/include/assetfooter.jsp" %>
    <script src="<c:url value="/static/js/actionjs/lms_adm_001.js" />"></script>
+   <script id="mytemplate" type="text/html">
+   	<tr>                                             											
+   		<td>{leavesType}</td>
+   		<td>{leavesAvailable}</td>
+   		<td>{leavesTaken}</td>
+   		<td>{leavesEntitled}</td>    
+	</tr>
+   </script>
+   
+   
