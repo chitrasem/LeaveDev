@@ -19,7 +19,7 @@ public class EntitleServiceImpl implements EntitleService{
 	@Autowired
 	private DataSource dataSource;
 	
-	@Override
+	/*@Override
 	public List<Entitledays> list() {
 		
 		String sql	= " SELECT								"   
@@ -70,7 +70,7 @@ public class EntitleServiceImpl implements EntitleService{
 			System.out.println(e);
 		} 
 		return null;
-	}
+	}*/
 
 	@Override
 	public boolean addUser(Entitledays b) {
@@ -90,7 +90,6 @@ public class EntitleServiceImpl implements EntitleService{
 		return false;
 	}
 
-	@Override
 	public List<Entitledays> getEntitiledList(int userId, int statusId) {
 		String sql	= " SELECT								"   
 				+ " 	leaveType,							"   
@@ -142,6 +141,12 @@ public class EntitleServiceImpl implements EntitleService{
 		System.out.println(e);
 	} 
 	return null;
+	}
+
+	@Override
+	public List<Entitledays> list() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

@@ -40,7 +40,9 @@
 			<artifactId>spring-web</artifactId>
 			<version>${springframework.version}</version>
 		</dependency>
-
+		<dependency><!-- jackson -->
+            <groupId>org.codehaus.jackson</groupId><artifactId>jackson-mapper-asl</artifactId><version>1.4.2</version>
+        </dependency>
 
 		<!-- JSP, Servlet, JSTL -->
 		<dependency>
