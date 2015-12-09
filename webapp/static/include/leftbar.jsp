@@ -33,7 +33,7 @@
                                     <ul class="nav child_menu" style="display: none">
                                     	<li><a href="#"><i class="fa fa-star-half-empty"></i> An Employee</a>
                                         </li>
-                                        <li><a href="lms_adm_001.jsp">Leave Balances</a>
+                                        <li><a href="<c:url value="/admin/lms_adm_001" />">Leave Balances</a>
                                         </li>
                                         <li><a href="lms_adm_002.jsp">List Leave Requested</a>
                                         </li>
