@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.kh.coocon.lmsapp.entities.Entitledays;
 import com.kh.coocon.lmsapp.enums.LmsMsg;
 import com.kh.coocon.lmsapp.services.EntitleService;
+import com.kh.coocon.lmsapp.services.LeaveService;
 
 @RestController
 @RequestMapping("/admin/action/service")
@@ -30,7 +31,7 @@ public class ActionController {
 	
 	@Autowired
 	EntitleService userService;
-	
+	LeaveService leaveService;
 /*	@RequestMapping(value = { "/lms_adm_001/{field1}/{field2}"}, method = RequestMethod.POST)
 	public ResponseEntity<Map<String, Object>> GetEntitledlist(@PathVariable int field1 , @PathVariable int field2,@RequestBody String test) {
 		System.out.println("test"+field1+"test1"+field2 + " | " + test  );
@@ -58,6 +59,22 @@ public class ActionController {
 			return new ResponseEntity<Map<String, Object>>(map, HttpStatus.OK);
 		}
 		
+		
+		@RequestMapping(value = { "/lms_adm_002"}, method = RequestMethod.POST)
+		public ResponseEntity<Map<String, Object>> getLeaveList(@RequestParam("empId") int empId,@RequestParam("statId") int statId) {
+			//List<Entitledays> Mylist = userService.list();
+			Map<String, Object> map = new HashMap<String, Object>();
+			Map<String, Object> listData = new HashMap<String, Object>();
+			listData.put("LEAVES_REC", leaveService.getLeavesList(empId));
+			if (listData.isEmpty()) {
+				map.put("MESSAGE", "No data");
+				return new ResponseEntity<Map<String, Object>>(map, HttpStatus.NO_CONTENT);
+			}
+			map.put("CODE",LmsMsg.RSLT_CD.getmsg() );
+			map.put("MESSAGE",LmsMsg.RSLT_MSG.getmsg() );
+			map.put("RESP_DATA", listData);
+			return new ResponseEntity<Map<String, Object>>(map, HttpStatus.OK);
+		}
 		
 	}
 	

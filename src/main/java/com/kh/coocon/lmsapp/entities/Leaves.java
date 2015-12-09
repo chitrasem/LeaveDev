@@ -1,23 +1,28 @@
 package com.kh.coocon.lmsapp.entities;
 
+import java.sql.Date;
+
 public class Leaves {
-	private String leavesStartdate;
-	private String leavesEnddate;
+	private Date leavesStartdate;
+	private Date leavesEnddate;
 	private String leavesDuration;
 	private String leavesReason;
 	private String leavsTypes;
 	private String leavesStatus;
-	public String getLeavesStartdate() {
+	private String leavesStartDateType;
+	private String leavesendDateType;
+
+	public Date getLeavesStartdate() {
 		return leavesStartdate;
 	}
-	public void setLeavesStartdate(String leavesStartdate) {
-		this.leavesStartdate = leavesStartdate;
+	public void setLeavesStartdate(Date date) {
+		this.leavesStartdate = date;
 	}
-	public String getLeavesEnddate() {
+	public Date getLeavesEnddate() {
 		return leavesEnddate;
 	}
-	public void setLeavesEnddate(String leavesEnddate) {
-		this.leavesEnddate = leavesEnddate;
+	public void setLeavesEnddate(Date date) {
+		this.leavesEnddate = date;
 	}
 	public String getLeavesDuration() {
 		return leavesDuration;
@@ -42,5 +47,17 @@ public class Leaves {
 	}
 	public void setLeavesStatus(String leavesStatus) {
 		this.leavesStatus = leavesStatus;
+	}
+	public String getLeavesStartDateType() {
+		return leavesStartDateType;
+	}
+	public void setLeavesStartDateType(String leavesStartDateType) {
+		this.leavesStartDateType = leavesStartDateType;
+	}
+	public String getLeavesendDateType() {
+		return leavesendDateType;
+	}
+	public void setLeavesendDateType(String leavesendDateType) {
+		this.leavesendDateType = leavesendDateType;
 	}
 }
