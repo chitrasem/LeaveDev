@@ -2,18 +2,21 @@ $(document).ready(function() {
 	var empId = 2;
 	
 	
-	var json = {
-			 "test" : "123"
-	}
-	
+	var a = {empId :2,statId : 2};
+	/*
+	a["ab"] = "hi";
+	a["bc"] = "oh";
+	*/
+	/* {type:"Fiat", model:"500", color:"white"},*/
+
+	console.log(a);
 	
 	$.ajax({
 		//url : "../admin/action/service/lms_adm_001/1/2",
 		url : "../admin/action/service/lms_adm_001",
 		dataType : "JSON",
-		contentType : 'application/json ; charset=utf-8',
 		type : "POST",
-		data : JSON.stringify({"value1" :"test1", "value2" :"test2"}),
+		data :a,
 		success : function(data) {
 			console.log(data.RESP_DATA);
 			//console.log(data.RESP_DATA['ENTITLE_REC']);

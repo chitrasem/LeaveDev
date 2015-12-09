@@ -36,29 +36,31 @@ public class ActionController {
 		System.out.println("test"+field1+"test1"+field2 + " | " + test  );
 		return null;
 		*/
-		@RequestMapping(value = { "/lms_adm_001"}, method = RequestMethod.POST)
-		public ResponseEntity<Map<String, Object>> GetEntitledlist(HttpServletRequest req,@RequestParam("value1") String value1) {
-			System.out.println(" | " + value1 );
-			return null;
+		/*@RequestMapping(value = { "/lms_adm_001"}, method = RequestMethod.POST)
+		public void doSomeTest(@RequestParam("ab") String ab,@RequestParam("ac") String bc){
+			System.out.println(ab+bc);
 			
-		
-		
-		
-		//List<Entitledays> Mylist = userService.list();
-		/*Map<String, Object> map = new HashMap<String, Object>();
-		Map<String, Object> listData = new HashMap<String, Object>();
-		listData.put("ENTITLE_REC", userService.getEntitiledList(0, 0));
-		if (listData.isEmpty()) {
-			map.put("MESSAGE", "No data");
-			return new ResponseEntity<Map<String, Object>>(map, HttpStatus.NO_CONTENT);
+		}*/
+	
+		@RequestMapping(value = { "/lms_adm_001"}, method = RequestMethod.POST)
+		public ResponseEntity<Map<String, Object>> GetEntitledlist(@RequestParam("empId") int empId,@RequestParam("statId") int statId) {
+			//List<Entitledays> Mylist = userService.list();
+			Map<String, Object> map = new HashMap<String, Object>();
+			Map<String, Object> listData = new HashMap<String, Object>();
+			listData.put("ENTITLE_REC", userService.getEntitiledList(empId, statId));
+			if (listData.isEmpty()) {
+				map.put("MESSAGE", "No data");
+				return new ResponseEntity<Map<String, Object>>(map, HttpStatus.NO_CONTENT);
+			}
+			map.put("CODE",LmsMsg.RSLT_CD.getmsg() );
+			map.put("MESSAGE",LmsMsg.RSLT_MSG.getmsg() );
+			map.put("RESP_DATA", listData);
+			return new ResponseEntity<Map<String, Object>>(map, HttpStatus.OK);
 		}
-		map.put("CODE",LmsMsg.RSLT_CD.getmsg() );
-		map.put("MESSAGE",LmsMsg.RSLT_MSG.getmsg() );
-		map.put("RESP_DATA", listData);
-		return new ResponseEntity<Map<String, Object>>(map, HttpStatus.OK);*/
+		
+		
 	}
 	
-}
 
 
 
