@@ -28,9 +28,8 @@
                         <div class="title_left">
                             <h3><small>
 									<ol class="breadcrumb">
-									  <li><a href="#">Home</a></li>
-									  <li><a href="#">An Employee</a></li>
-									  <li class="active"><a href="#">My leave</a></li>
+									  <li><a href="<c:url value="/admin/home" />">Home</a></li>
+									  <li class="active"><a href="<c:url value="/admin/lms_adm_002" />">My leave</a></li>
 									</ol>
 								</small>
 							</h3>
