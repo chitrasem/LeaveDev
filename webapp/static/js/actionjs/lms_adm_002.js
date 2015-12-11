@@ -10,12 +10,23 @@ $(document).ready(function() {
 				var res = data.RESP_DATA['LEAVES_REC'];
 				console.log(res);
 				$.each(res,function(i,v){
-					/*var data = {};
-					data['LA']  = res[i].leavesAvailable;
-					data['LE']  = res[i].leavesEntitled;
-					data['LT']  = res[i].leavesTaken;
-					data['LTY'] = res[i].leavesTypes;
-					$("#mytemplate").tmpl(data).appendTo("tbody#entitle");*/
+					var data = {};
+					data['LD']  = res[i].leavesDuration;
+					data['LED']  = res[i].leavesEnddate;
+					data['LR']  = res[i].leavesReason;
+					data['LSD'] = res[i].leavesStartdate;
+					data['LS'] = res[i].leavesStatus;
+					data['LT'] = res[i].leavesType;
+					data['ID'] = i;
+					if((data['LS'])=='Approved') {
+						(data['LS'])='<span class="label label-success">Approve</span>';
+					} else if((data['LS'])=='Reject') {
+						(data['LS'])='<span class="label label-danger">Reject</span>';
+					} else {
+						(data['LS'])='<span class="label label-info">Plan</span>';
+					}
+					data['LEDT'] = res[i].leavesendDateType;
+					$("#lmsAdm002").tmpl(data).appendTo("tbody#leaveBalanced").html();
 					
 					console.log(data);
 					

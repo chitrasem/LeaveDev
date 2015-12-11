@@ -7,10 +7,10 @@ public class Leaves {
 	private Date leavesEnddate;
 	private String leavesDuration;
 	private String leavesReason;
-	private String leavsTypes;
 	private String leavesStatus;
 	private String leavesStartDateType;
 	private String leavesendDateType;
+	private String leavesType;
 
 	public Date getLeavesStartdate() {
 		return leavesStartdate;
@@ -36,12 +36,6 @@ public class Leaves {
 	public void setLeavesReason(String leavesReason) {
 		this.leavesReason = leavesReason;
 	}
-	public String getLeavsTypes() {
-		return leavsTypes;
-	}
-	public void setLeavsTypes(String leavsTypes) {
-		this.leavsTypes = leavsTypes;
-	}
 	public String getLeavesStatus() {
 		return leavesStatus;
 	}
@@ -59,5 +53,11 @@ public class Leaves {
 	}
 	public void setLeavesendDateType(String leavesendDateType) {
 		this.leavesendDateType = leavesendDateType;
+	}
+	public String getLeavesType() {
+		return leavesType;
+	}
+	public void setLeavesType(String leavesType) {
+		this.leavesType = leavesType;
 	}
 }

@@ -31,7 +31,7 @@ public class ActionController {
 	
 	@Autowired
 	EntitleService userService;
-	
+	@Autowired
 	LeaveService leaveService;
 /*	@RequestMapping(value = { "/lms_adm_001/{field1}/{field2}"}, method = RequestMethod.POST)
 	public ResponseEntity<Map<String, Object>> GetEntitledlist(@PathVariable int field1 , @PathVariable int field2,@RequestBody String test) {
@@ -62,7 +62,7 @@ public class ActionController {
 		
 		
 		@RequestMapping(value = { "/lms_adm_002"}, method = RequestMethod.POST)
-		public ResponseEntity<Map<String, Object>> getLeaveList(@RequestParam("empId") int empId) {
+		public ResponseEntity<Map<String, Object>> getLeavesList(@RequestParam("empId") int empId) {
 			//List<Entitledays> Mylist = userService.list();
 					
 			Map<String, Object> map = new HashMap<String, Object>();

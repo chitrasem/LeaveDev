@@ -14,6 +14,7 @@ import org.springframework.stereotype.Service;
 
 import com.kh.coocon.lmsapp.entities.Leaves;
 
+
 @Service
 public class LeaveServiceImpl implements LeaveService  {
 	@Autowired
@@ -32,10 +33,12 @@ public class LeaveServiceImpl implements LeaveService  {
 					  + " 	A .startdatetype,						      "   
 					  + " 	A .enddatetype,							      "   
 					  + " 	A .duration,							      "   
-					  + " 	b. NAME								      "   
+					  + " 	b. NAME	as leavesStatus	,						      "   
+					  + " 	d. NAME AS leavesType							      "   
 					  + " FROM								      "   
 					  + " 	lms_leaves A							      "   
 					  + " LEFT JOIN lms_status b ON A .status_id = b.status_id		      "   
+					  + " LEFT JOIN lms_types d ON A .type_id = d.type_id		      "   
 					  + " LEFT JOIN lms_users C ON A .employee_id = C .id where employee_id = ?     " ;  
 	
 
@@ -59,6 +62,8 @@ public class LeaveServiceImpl implements LeaveService  {
 			leave.setLeavesStartDateType(rs.getString("startdatetype"));
 			leave.setLeavesendDateType(rs.getString("enddatetype"));
 			leave.setLeavesDuration(rs.getString("duration"));
+			leave.setLeavesStatus(rs.getString("leavesStatus"));
+			leave.setLeavesType(rs.getString("leavesType"));
 			ll.add(leave);
 		}
 		return ll;

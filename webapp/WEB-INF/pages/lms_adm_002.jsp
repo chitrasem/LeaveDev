@@ -85,49 +85,8 @@
 												<th>Status</th>
                                             </tr>
                                         </thead>
-                                        <tbody>
-											<tr>
-                                                <th scope="row">
-                                                	<a href="javascrip:void(0)"><span class="fa fa-eye" data-toggle="modal" data-target="#myModal" data-placement="top" title="" data-original-title="View"></span></a>
-                                                </th>
-                                                <td>
-													1
-												</td>												
-                                                <td>10/22/2015(Morning)</td>
-                                                <td>10/24/2015(Morning)</td>
-                                                <td>2</td>
-                                                <td>Sister Wedding</td>
-                                                <td>Special Leave</td>
-                                                <td><span class="label label-info">plan</span></td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">
-                                                	<a href=""><span class="fa fa-eye" data-toggle="tooltip" data-placement="top" title="" data-original-title="view"></span></a>
-                                                </th>
-                                                <td>
-													1
-												</td>												
-                                                <td>10/22/2015(Morning)</td>
-                                                <td>10/24/2015(Morning)</td>
-                                                <td>2</td>
-                                                <td>Sister Wedding</td>
-                                                <td>Special Leave</td>
-                                                <td><span class="label label-success">Approve</span></td>
-                                            </tr>                                 
-                                            <tr>
-                                                <th scope="row">
-                                                	<a href=""><span class="fa fa-eye" data-toggle="tooltip" data-placement="top" title="" data-original-title="view"></span></a>
-                                                </th>
-                                                <td>
-													1
-												</td>												
-                                                <td>10/22/2015(Morning)</td>
-                                                <td>10/24/2015(Morning)</td>
-                                                <td>2</td>
-                                                <td>Sister Wedding</td>
-                                                <td>Special Leave</td>
-                                                <td><span class="label label-danger">Reject</span></td>
-                                            </tr>                                 
+                                        <tbody id="leaveBalanced">
+											                                
                                         </tbody>
 										<!--<tfoot>
 											<div><span>There aren't any users</span></div>
@@ -160,3 +119,22 @@
 
     <%@include file="/static/include/assetfooter.jsp" %>
      <script src="<c:url value="/static/js/actionjs/lms_adm_002.js" />"></script>
+     <script type="text/x-jquery-tmpl" id="lmsAdm002">
+		<tr>   
+			<th scope="row">
+				<a href="javascrip:void(0)"><span class="fa fa-eye" data-toggle="modal" data-target="#myModal" data-placement="top" title="" data-original-title="View"></span></a>
+            </th>  
+			<td>1</td>                            											
+			<td>{{= LSD}}</td>
+   			<td>{{= LED}}</td>
+   			<td>{{= LD}}</td>
+   			<td>{{= LR}}</td>
+   			<td>{{= LT}}</td>
+   			<td>
+				{{html LS }}
+			</td>
+   			   
+		</tr>
+	</script>
+     
+     
