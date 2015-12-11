@@ -41,9 +41,9 @@
                                         </li>
                                         <li><a href="#"><i class="fa fa-star-half-empty"></i> An Manager</a>
                                         </li>
-                                        <li><a href="lms_adm_004.jsp">All Leave Requests</a>
+                                        <li><a href="<c:url value="/admin/lms_adm_004" />">All Leave Requests</a>
                                         </li>
-                                        <li><a href="lms_adm_005.jsp">All Overtime Request</a>
+                                        <li><a href="<c:url value="/admin/lms_adm_005" />">All Overtime Request</a>
                                         </li>
                                     </ul>
                                 </li>
