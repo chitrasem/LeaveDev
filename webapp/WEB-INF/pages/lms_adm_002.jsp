@@ -124,7 +124,7 @@
 			<th scope="row">
 				<a href="javascrip:void(0)"><span class="fa fa-eye" data-toggle="modal" data-target="#myModal" data-placement="top" title="" data-original-title="View"></span></a>
             </th>  
-			<td>1</td>                            											
+			<td>{{= ID}}</td>                            											
 			<td>{{= LSD}}</td>
    			<td>{{= LED}}</td>
    			<td>{{= LD}}</td>
