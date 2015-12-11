@@ -17,7 +17,7 @@ $(document).ready(function() {
 					data['LSD'] = res[i].leavesStartdate;
 					data['LS'] = res[i].leavesStatus;
 					data['LT'] = res[i].leavesType;
-					data['ID'] = i;
+					data['ID'] = i+1;
 					if((data['LS'])=='Approved') {
 						(data['LS'])='<span class="label label-success">Approve</span>';
 					} else if((data['LS'])=='Reject') {
