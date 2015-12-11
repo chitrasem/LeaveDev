@@ -9,7 +9,7 @@ $(document).ready(function() {
 	*/
 	/* {type:"Fiat", model:"500", color:"white"},*/
 
-	console.log(a);
+	//console.log(a);
 	
 	$.ajax({
 		//url : "../admin/action/service/lms_adm_001/1/2",
@@ -33,7 +33,7 @@ $(document).ready(function() {
 				})
 			},
 			error : function(data) {
-				console.log(data);
+			//	console.log(data);
 			}
 
 		});
