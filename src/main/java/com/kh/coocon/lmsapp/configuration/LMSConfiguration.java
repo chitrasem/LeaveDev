@@ -2,9 +2,11 @@ package com.kh.coocon.lmsapp.configuration;
 
 import javax.sql.DataSource;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.format.FormatterRegistry;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.web.multipart.MultipartResolver;
 import org.springframework.web.servlet.ViewResolver;
@@ -13,10 +15,15 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
+import com.kh.coocon.lmsapp.configuration.security.RoleToUserProfileConverter;
+
 @Configuration
 @EnableWebMvc
 @ComponentScan(basePackages = { "com.kh.coocon.lmsapp" })
 public class LMSConfiguration extends WebMvcConfigurerAdapter{
+	
+	@Autowired
+	RoleToUserProfileConverter roleToUserProfileConverter;
 
 	@Bean
 	public ViewResolver viewResolver() {
@@ -50,6 +57,10 @@ public class LMSConfiguration extends WebMvcConfigurerAdapter{
 		dataSource.setUsername("postgres");
 		dataSource.setPassword("admin");
 		return dataSource;
+	}
+	@Override
+	public void addFormatters(FormatterRegistry registry) {
+		registry.addConverter(roleToUserProfileConverter);
 	}
 	
 }

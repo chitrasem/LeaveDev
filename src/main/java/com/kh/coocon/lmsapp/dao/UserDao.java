@@ -1,12 +1,12 @@
-package com.kh.coocon.lmsapp.services;
+package com.kh.coocon.lmsapp.dao;
 
 import com.kh.coocon.lmsapp.entities.User;
 
-public interface UserService {
+public interface UserDao {
 	 
     User findById(int id);
      
-    User findBySso(String sso);
+    User findBySSO(String sso);
     
     void save(User user);
      
