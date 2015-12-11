@@ -36,7 +36,7 @@ public class MainController {
 	@RequestMapping(value="/admin/lms_adm_003", method=RequestMethod.GET)
 	public String showLms_adm_003(ModelMap m){
 		m.addAttribute("user", getPrincipal());		
-		return "lms_adm_001";
+		return "lms_adm_003";
 	}
 	
 	@RequestMapping(value="/admin/lms_adm_004", method=RequestMethod.GET)
