@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping("/")
 public class MainController {
 
-	@RequestMapping(value={"/","/dashboard","/home","/index"} , method = RequestMethod.GET)
+	@RequestMapping(value={"/","/admin/dashboard","/admin/home","/admin/index"} , method = RequestMethod.GET)
 	public String dasboardPage(ModelMap m){
 		m.addAttribute("message","Dashboard");
 		return "lms_main";
@@ -36,13 +36,13 @@ public class MainController {
 	@RequestMapping(value="/admin/lms_adm_003", method=RequestMethod.GET)
 	public String showLms_adm_003(ModelMap m){
 		m.addAttribute("user", getPrincipal());		
-		return "lms_adm_001";
+		return "lms_adm_003";
 	}
 	
 	@RequestMapping(value="/admin/lms_adm_004", method=RequestMethod.GET)
 	public String showLms_adm_004(ModelMap m){
 		m.addAttribute("user", getPrincipal());		
-		return "lms_adm_003";
+		return "lms_adm_004";
 	}
 	
 	@RequestMapping(value="/admin/lms_adm_005", method=RequestMethod.GET)
@@ -71,14 +71,14 @@ public class MainController {
 		return "lms_adm_011";
 	}
 	
-	@RequestMapping(value="/admin/lms_adm_0024", method=RequestMethod.GET)
+	@RequestMapping(value="/admin/lms_adm_014", method=RequestMethod.GET)
 	public String showLms_adm_014(ModelMap m){
 		m.addAttribute("user", getPrincipal());		
 		return "lms_adm_014";
 	}
 	
 	
-	@RequestMapping(value="/admin/lms_adm_025", method=RequestMethod.GET)
+	@RequestMapping(value="/admin/lms_adm_015", method=RequestMethod.GET)
 	public String showLms_adm_015(ModelMap m){
 		m.addAttribute("user", getPrincipal());		
 		return "lms_adm_015";
@@ -125,7 +125,7 @@ public class MainController {
 	@RequestMapping(value="/admin/lms_adm_028", method=RequestMethod.GET)
 	public String showLms_adm_028(ModelMap m){
 		m.addAttribute("user", getPrincipal());		
-		return "lms_adm_0028";
+		return "lms_adm_028";
 	}
 	
 	@RequestMapping(value="/admin/lms_adm_029", method=RequestMethod.GET)

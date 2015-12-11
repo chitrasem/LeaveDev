@@ -62,7 +62,7 @@
                                 <div class="x_content">
                                    <div class="row">
                                         <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                                          <a href="lms_adm_001.jsp">
+                                          <a href="<c:url value="/admin/lms_adm_001" />">
                                             <div class="tile-stats" style="height: 138px;text-align: center;">
                                                 <div class="icon" style="right: 130px;"><i class="fa fa-bar-chart"></i>
                                                 </div>
@@ -72,7 +72,7 @@
                                         </div>
                                         
                                         <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                                            <a href="lms_adm_002.jsp">
+                                           <a href="<c:url value="/admin/lms_adm_002" />">
                                             <div class="tile-stats" style="height: 138px;text-align: center;">
                                                 <div class="icon" style="right: 130px;"><i class="fa fa-list"></i>
                                                 </div>
@@ -81,7 +81,7 @@
                                             </a>
                                         </div>
                                         <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                                          <a href="lms_adm_027.jsp">
+                                         <a href="<c:url value="/admin/lms_adm_027" />">
                                             <div class="tile-stats" style="height: 138px;text-align: center;">
                                                 <div class="icon" style="right: 130px;"><i class="fa fa-pencil-square-o"></i>
                                                 </div>

@@ -3,7 +3,7 @@
                 <div class="left_col scroll-view">
 
                     <div class="navbar nav_title" style="border: 0;">
-                        <a href="lms_main.jsp" class="site_title"><i class="fa fa-paw"></i> <span>Leave Management</span></a>
+                        <a href="<c:url value="home"/>" class="site_title"><i class="fa fa-paw"></i> <span>Leave Management</span></a>
                     </div>
                     <div class="clearfix"></div>
 
@@ -37,25 +37,25 @@
                                         </li>
                                         <li><a href="<c:url value="/admin/lms_adm_002" />">List Leave Requested</a>
                                         </li>
-                                        <li><a href="lms_adm_003.jsp">New Leaves</a>
+                                        <li><a href="<c:url value="/admin/lms_adm_003" />">New Leaves</a>
                                         </li>
                                         <li><a href="#"><i class="fa fa-star-half-empty"></i> An Manager</a>
                                         </li>
-                                        <li><a href="lms_adm_004.jsp">All Leave Requests</a>
+                                        <li><a href="<c:url value="/admin/lms_adm_004" />">All Leave Requests</a>
                                         </li>
-                                        <li><a href="lms_adm_005.jsp">All Overtime Request</a>
+                                        <li><a href="<c:url value="/admin/lms_adm_005" />">All Overtime Request</a>
                                         </li>
                                     </ul>
                                 </li>
                                 <li><a href="javascript:"><i class="fa fa-key"></i> Admin <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu" style="display: none">
-                                        <li><a href="lms_adm_006.jsp">List of Users</a>
+                                        <li><a href="<c:url value="/admin/lms_adm_006" />">List of Users</a>
                                         </li>
-                                        <li><a href="lms_adm_008.jsp">Create Users</a>
+                                        <li><a href="<c:url value="/admin/lms_adm_008" />">Create Users</a>
                                         </li>
                                         <li><a href="#"><i class="fa fa-star-half-empty"></i> Leaves</a>
                                         </li>
-                                        <li><a href="lms_adm_011.jsp">List of Types</a>
+                                        <li><a href="<c:url value="/admin/lms_adm_011" />">List of Types</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -63,25 +63,25 @@
                                     <ul class="nav child_menu" style="display: none">
                                     	<li><a href="javascript:"><i class="fa fa-star-half-empty"></i> EMPLOYEE</a>
                                         </li>
-                                        <li><a href="lms_adm_014.jsp">List of employees</a>
+                                        <li><a href="<c:url value="/admin/lms_adm_014" />">List of employees</a>
                                         </li>
-                                        <li><a href="lms_adm_015.jsp">Organization</a>
+                                        <li><a href="<c:url value="/admin/lms_adm_015" />">Organization</a>
                                         </li>
                                         <li><a href="javascript:"><i class="fa fa-star-half-empty"></i> CONTRACTS</a>
                                         </li>
-                                        <li><a href="lms_adm_019">List of Contracts</a>
+                                        <li><a href="<c:url value="/admin/lms_adm_019" />">List of Contracts</a>
                                         </li>
-                                        <li><a href="lms_adm_021.jsp">List of Positions</a>
+                                        <li><a href="<c:url value="/admin/lms_adm_021" />">List of Positions</a>
                                         </li>
                                         <li><a href="javascript:"><i class="fa fa-star-half-empty"></i> REPORTS</a>
                                         </li>
-                                        <li><a href="lms_adm_023.jsp">leave Balance</a>
+                                        <li><a href="<c:url value="/admin/lms_adm_023" />">leave Balance</a>
                                         </li>
                                     </ul>
                                 </li>
                                 <li><a href="javascript:"><i class="fa fa-cog"></i>Validation<span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu" style="display: none">
-                                        <li><a href="lms_adm_024.jsp">Delegations</a>
+                                        <li><a href="<c:url value="/admin/lms_adm_024" />">Delegations</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -89,13 +89,13 @@
                                     <ul class="nav child_menu" style="display: none">
                                     	<li><a href="javascript:"><i class="fa fa-star-half-empty"></i> Leaves</a>
                                         </li>
-                                        <li><a href="lms_adm_027.jsp">Request leaves</a>
+                                        <li><a href="<c:url value="/admin/lms_adm_027" />">Request leaves</a>
                                         </li>
                                         <li><a href="javascript:"><i class="fa fa-star-half-empty"></i> OVERTIME</a>
                                         </li>
-                                        <li><a href="lms_adm_028.jsp">List of OT </a>
+                                        <li><a href="<c:url value="/admin/lms_adm_028" />">List of OT </a>
                                         </li>
-                                        <li><a href="lms_adm_029.jsp">Request OT </a>
+                                        <li><a href="<c:url value="/admin/lms_adm_029" />">Request OT </a>
                                         </li>
                                     </ul>
                                 </li>
@@ -117,7 +117,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="menu_section">
+                        <!-- <div class="menu_section">
                             <h3>Live On</h3>
                             <ul class="nav side-menu">
                                 <li><a><i class="fa fa-bug"></i> Calendar <span class="fa fa-chevron-down"></span></a>
@@ -152,7 +152,7 @@
                                 <li><a><i class="fa fa-laptop"></i> Calendar <span class="label label-success pull-right">Coming Soon</span></a>
                                 </li>
                             </ul>
-                        </div>
+                        </div> -->
 
                     </div>
                     <!-- /sidebar menu -->
