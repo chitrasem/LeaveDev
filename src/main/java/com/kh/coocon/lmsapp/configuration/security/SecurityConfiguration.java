@@ -60,15 +60,15 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
   
       http.authorizeRequests()
-        .antMatchers("/", "/home").permitAll()
-        .antMatchers("/account/**").access("hasRole('ACCOUNTANT') or hasRole('DIRECTOR')")
-        .antMatchers("/admin/**").access("hasRole('TEACHER') or hasRole('ADMIN')")
-        .antMatchers("/db/**").access("hasRole('DIRECTOR')")
+        .antMatchers("/", "/home","/admin/**").permitAll()
+        /*.antMatchers("/account/**").access("hasRole('ACCOUNTANT') or hasRole('DIRECTOR')")
+        .antMatchers("/admin/**").access("hasRole('ADMIN')")
+        .antMatchers("/db/**").access("hasRole('DIRECTOR')")*/
         
         .and().formLogin().loginPage("/login").successHandler(customSuccessHandler)
         .usernameParameter("ssoId").passwordParameter("password")
-        .and().rememberMe().rememberMeParameter("remember-me").tokenRepository(persistentTokenRepository())
-        .and().csrf()
+        //.and().rememberMe().rememberMeParameter("remember-me").tokenRepository(persistentTokenRepository())
+        //.and().csrf()
         .and().exceptionHandling().accessDeniedPage("/Access_Denied");
   
     }
