@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping("/")
 public class MainController {
 
-	@RequestMapping(value={"/","/dashboard","/home","/index"} , method = RequestMethod.GET)
+	@RequestMapping(value={"/","/admin/dashboard","/admin/home","/admin/index"} , method = RequestMethod.GET)
 	public String dasboardPage(ModelMap m){
 		m.addAttribute("message","Dashboard");
 		return "lms_main";

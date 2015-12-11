@@ -3,7 +3,7 @@
                 <div class="left_col scroll-view">
 
                     <div class="navbar nav_title" style="border: 0;">
-                        <a href="lms_main.jsp" class="site_title"><i class="fa fa-paw"></i> <span>Leave Management</span></a>
+                        <a href="<c:url value="home"/>" class="site_title"><i class="fa fa-paw"></i> <span>Leave Management</span></a>
                     </div>
                     <div class="clearfix"></div>
 
