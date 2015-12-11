@@ -35,7 +35,7 @@
                                         </li>
                                         <li><a href="<c:url value="/admin/lms_adm_001" />">Leave Balances</a>
                                         </li>
-                                        <li><a href="lms_adm_002.jsp">List Leave Requested</a>
+                                        <li><a href="<c:url value="/admin/lms_adm_002" />">List Leave Requested</a>
                                         </li>
                                         <li><a href="lms_adm_003.jsp">New Leaves</a>
                                         </li>
