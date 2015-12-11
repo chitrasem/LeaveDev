@@ -24,7 +24,7 @@
                                     <li>
                                         <a href="javascript:;">Help</a>
                                     </li>
-                                    <li><a href="<c:url value="/admin/logout"/>"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
+                                    <li><a href="<c:url value="/logout"/>"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
                                     </li>
                                 </ul>
                             </li>
@@ -41,7 +41,7 @@
                                         <img src="<c:url value="/static/images/img.jpg" />" alt="Profile Image" />
                                     </span>
                                             <span>
-                                        <span>John Smith</span>
+                                        <span>${user}</span>
                                             <span class="time">3 mins ago</span>
                                             </span>
                                             <span class="message">
