@@ -100,10 +100,7 @@
                       <div class="col-md-2 col-sm-3 col-xs-12">
                         <select class="form-control">
                           <option>Morning</option>
-                          <option>Option one</option>
-                          <option>Option two</option>
-                          <option>Option three</option>
-                          <option>Option four</option>
+                          <option>Afernoon</option>
                         </select>
                       </div>
                     </div>
@@ -124,11 +121,8 @@
                       </div>
                       <div class="col-md-2 col-sm-3 col-xs-12">
                         <select class="form-control">
+                          <option>Morning</option>
                           <option>Afternoon</option>
-                          <option>Option one</option>
-                          <option>Option two</option>
-                          <option>Option three</option>
-                          <option>Option four</option>
                         </select>
                       </div>
                     </div>
