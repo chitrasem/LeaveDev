@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,6 +23,7 @@ import com.kh.coocon.lmsapp.entities.Entitledays;
 import com.kh.coocon.lmsapp.enums.LmsMsg;
 import com.kh.coocon.lmsapp.services.EntitleService;
 import com.kh.coocon.lmsapp.services.LeaveService;
+import com.kh.coocon.lmsapp.services.UserService;
 
 @RestController
 @RequestMapping("/admin/action/service")
@@ -33,7 +35,10 @@ public class ActionController {
 	EntitleService userService;
 	@Autowired
 	LeaveService leaveService;
-
+	// @Autowired
+	// UserService userService;
+	
+	
 	
 /*	@RequestMapping(value = { "/lms_adm_001/{field1}/{field2}"}, method = RequestMethod.POST)
 	public ResponseEntity<Map<String, Object>> GetEntitledlist(@PathVariable int field1 , @PathVariable int field2,@RequestBody String test) {
