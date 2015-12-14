@@ -41,7 +41,8 @@ public class ActionController {
 	UserService userService;
 	
 	public int UserId = userService.findBySso(getPrincipal()).getId();
-
+	
+	
 	
 /*	@RequestMapping(value = { "/lms_adm_001/{field1}/{field2}"}, method = RequestMethod.POST)
 	public ResponseEntity<Map<String, Object>> GetEntitledlist(@PathVariable int field1 , @PathVariable int field2,@RequestBody String test) {
@@ -71,8 +72,7 @@ public class ActionController {
 			//System.out.println("console is "+ userService.findBySso(getPrincipal()).getId());
 			//return null;
 		}
-		
-		
+
 		@RequestMapping(value = { "/lms_adm_002"}, method = RequestMethod.POST)
 		public ResponseEntity<Map<String, Object>> getLeavesList(@RequestParam("empId") int empId) {
 			//List<Entitledays> Mylist = userService.list();
@@ -100,7 +100,7 @@ public class ActionController {
 	             userName = principal.toString();
 	         }
 	         return userName;
-	     	}
+	   	}
 	}
 	
 
