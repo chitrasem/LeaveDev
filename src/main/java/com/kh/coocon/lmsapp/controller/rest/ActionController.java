@@ -39,6 +39,7 @@ public class ActionController {
 	LeaveService leaveService;
 	@Autowired
 	UserService userService;
+	
 	public int UserId = userService.findBySso(getPrincipal()).getId();
 
 	
