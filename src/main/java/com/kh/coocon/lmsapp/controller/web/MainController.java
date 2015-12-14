@@ -3,18 +3,25 @@ package com.kh.coocon.lmsapp.controller.web;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
 import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Service;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.kh.coocon.lmsapp.services.UserService;
+
 @Controller
 @RequestMapping("/")
 public class MainController {
+	
+	@Autowired
+	UserService userService;
 
 	@RequestMapping(value={"/","/admin/dashboard","/admin/home","/admin/index"} , method = RequestMethod.GET)
 	public String dasboardPage(ModelMap m){
@@ -30,6 +37,7 @@ public class MainController {
 	
 	@RequestMapping(value="/admin/lms_adm_001", method=RequestMethod.GET)
 	public String showLms_adm_001(ModelMap m){
+		m.addAttribute("users", userService.findBySso(getPrincipal()));	
 		m.addAttribute("user", getPrincipal());		
 		return "lms_adm_001";
 	}
