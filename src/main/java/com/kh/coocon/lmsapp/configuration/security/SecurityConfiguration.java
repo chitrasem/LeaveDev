@@ -61,15 +61,15 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
   
       http.authorizeRequests()
         .antMatchers("/", "/home","/admin/**").permitAll()
-        /*.antMatchers("/account/**").access("hasRole('ACCOUNTANT') or hasRole('DIRECTOR')")
+        .antMatchers("/account/**").access("hasRole('ACCOUNTANT') or hasRole('DIRECTOR')")
         .antMatchers("/admin/**").access("hasRole('ADMIN')")
-        .antMatchers("/db/**").access("hasRole('DIRECTOR')")*/
+        .antMatchers("/db/**").access("hasRole('DIRECTOR')")
         
         .and().formLogin().loginPage("/login").successHandler(customSuccessHandler)
         .usernameParameter("ssoId").passwordParameter("password")
-        //.and().rememberMe().rememberMeParameter("remember-me").tokenRepository(persistentTokenRepository())
-        //.and().csrf()
-        .and().exceptionHandling().accessDeniedPage("/Access_Denied");
+        .and().rememberMe().rememberMeParameter("remember-me").tokenRepository(persistentTokenRepository())
+        .and().exceptionHandling().accessDeniedPage("/Access_Denied")
+        .and().csrf().disable();
   
     }
     @Bean
